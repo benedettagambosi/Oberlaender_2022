@@ -19,7 +19,7 @@ np.random.seed(SEED)
 
 param_recurrent = para.ParameterSpace({})
 
-param_recurrent['read_out_off'] = False
+param_recurrent['read_out_off'] = True
 # ========================================== general parameters for RNN ==========================================
 if not TEST_NETWORK:
     param_recurrent['num_exc_neurons'] = 2400                                             # Number of recurrent E neurons
@@ -221,7 +221,7 @@ param_recurrent['plotting_time'] = 3000.0
 param_recurrent['data_path'] = {}
 param_recurrent['data_path']['data_root_path'] = 'experiments/data'
 param_recurrent['data_path']['project_name'] = 'clock_training'
-# param_recurrent['data_path']['parameterspace_label'] = 'sequence_learning_and_prediction'
+param_recurrent['data_path']['parameterspace_label'] = 'sequence_learning_and_prediction'
 
 # ========================================== REST ==========================================
 
@@ -412,7 +412,8 @@ param_readout['data_path'] = {}
 param_readout['data_path']['data_root_path'] = 'experiments/data'
 param_readout['data_path']['project_name'] = 'sequence_training'
 # param_readout['data_path']['parameterspace_label'] = 'sequence_learning_and_prediction'
-param_readout['rnn_connections'] = '/Users/Jette/Desktop/results/NEST/job_3822329/1787e7674087ddd1d5749039f947a2cd/all_connections_42.npy'  # TODO
+# param_readout['rnn_connections'] = '/Users/Jette/Desktop/results/NEST/job_3822329/1787e7674087ddd1d5749039f947a2cd/all_connections_42.npy'  # TODO
+param_readout['rnn_connections'] = '/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/experiments/data/clock_training/e131402295700eeb6f53ffe399e0274a/'
 param_readout['overwrite_files'] = True
 
 # ========================================== task parameters ==========================================

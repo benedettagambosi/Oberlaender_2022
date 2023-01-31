@@ -8,10 +8,11 @@ import os
 from pathlib import Path
 from joblib import Parallel, delayed
 
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
 from mbc_network.helper import training_helper
 from experiments.parameters_space import param_readout
-
-NUMBER_OF_PARALLEL_JOBS = 2
+NUMBER_OF_PARALLEL_JOBS = 1
 
 if __name__ == '__main__':
 

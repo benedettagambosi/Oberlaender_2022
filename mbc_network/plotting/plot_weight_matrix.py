@@ -6,6 +6,8 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 import numpy as np
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
 from mbc_network.helper import training_helper
 from mbc_network.helper import plot_helper
 
@@ -25,7 +27,7 @@ def plot_weight_matrices(axes: Axes = None):
     plot_helper.plot_weight_matrix(ax=axes[1], connections=new_connections, title='new weight matrix')
     plot_helper.plot_diff_weight_matrix(ax=axes[2], connections_new=new_connections, connections_old=old_connections, title='difference of matrices')
 
-    print(np.allclose(plot_helper.matrix_from_connections(old_connections), plot_helper.matrix_from_connections(new_connections)))
+    # print(np.allclose(plot_helper.matrix_from_connections(old_connections), plot_helper.matrix_from_connections(new_connections)))
 # def plot_weight_matrices(axes=None):
 
 #     assert axes is not None, 'Need axes object.'

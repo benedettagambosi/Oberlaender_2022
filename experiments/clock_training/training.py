@@ -14,8 +14,11 @@ from pprint import pprint
 import nest
 import numpy as np
 
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
 import mbc_network.models.clock_model as clock_model
 import mbc_network.helper.training_helper as training_helper
+
 from experiments.parameters_space import param_recurrent as paramspace_recurrent
 
 

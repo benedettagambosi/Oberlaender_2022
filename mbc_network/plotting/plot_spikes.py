@@ -1,6 +1,8 @@
 """ TODO
 """
 import os
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
 from pickle import load
 
 import matplotlib.pyplot as plt
@@ -17,8 +19,10 @@ def plot_spikes(ax=None):
 
     path_dict = {}
     path_dict['data_root_path'] = 'data'
-    path_dict['project_name'] = 'sequence_learning_performance'
-    path_dict['parameterspace_label'] = 'sequence_learning_and_prediction'
+    # path_dict['project_name'] = 'sequence_learning_performance'
+    path_dict['project_name'] = 'clock_training'
+    # path_dict['parameterspace_label'] = 'sequence_learning_and_prediction'
+    path_dict['label'] = '24a665c1ea0086faa7672978a3823e30'
 
     # get parameters
     PS, PS_path = training_helper.get_parameter_set(path_dict)  # TODO remove helper.parameter_set_list() and fix data path
@@ -30,17 +34,17 @@ def plot_spikes(ax=None):
 
     # get trained sequences
     # TODO load data training fails if the sequences are not of the same length
-    sequences = load_data(PS_path, 'training_data')
-    vocabulary = load_data(PS_path, 'vocabulary')
+    # sequences = load_data(PS_path, 'training_data')
+    # vocabulary = load_data(PS_path, 'vocabulary')
 
-    print('#### sequences used for training ### ')
-    for i, sequence in enumerate(sequences):
-        seq = ''
-        for char in sequence:
-            seq += str(char).ljust(2)
-        print('sequence %d: %s' % (i, seq))
+    # print('#### sequences used for training ### ')
+    # for i, sequence in enumerate(sequences):
+    #     seq = ''
+    #     for char in sequence:
+    #         seq += str(char).ljust(2)
+    #     print('sequence %d: %s' % (i, seq))
 
-    # get data path
+    # # get data path
     if replay:
         data_path = training_helper.get_data_path(params['data_path'], params['label'], 'replay')
     else:

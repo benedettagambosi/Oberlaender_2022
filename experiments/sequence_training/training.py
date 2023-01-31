@@ -28,9 +28,12 @@ import sys
 import nest
 import numpy as np
 
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
 from mbc_network.models.sequence_model import SequenceModel
 import mbc_network.helper.training_helper as training_helper
 import mbc_network.helper.plot_helper as plot_helper
+
 from experiments.parameters_space import param_readout as paramspace_readout
 
 

@@ -24,6 +24,10 @@ import matplotlib.pyplot as plt
 from parameters import ParameterSpace
 from mbc_network.helper import plot_helper
 from time import perf_counter
+
+import sys, os
+sys.path.append('/home/benedetta/.pyenv/versions/3.8.6/envs/mbc/mbc_replication/')
+
 from mbc_network.plotting.plot_results import plot_2_mins_results
 
 from mbc_network.helper import training_helper
@@ -665,7 +669,7 @@ class Model:
         if os.path.exists(conn_path):
             conns = np.load(conn_path)
         else:
-            raise Exception('Connection file does not exist. Data path or file name might be incorrect.')
+            raise Exception('Connection file does not exist '+conn_path+'. Data path or file name might be incorrect.')
 
         print(f'\nLoad connections from {conn_path}...')
 
